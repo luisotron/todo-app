@@ -1,1 +1,7 @@
-<p>todo works!</p>
+<h3>Aplicación TODO</h3>
+<hr>
+<!--Formulario agregar tareas-->
+<todo-add-task (onNewTask)="onNewTask($event)"></todo-add-task>
+<hr>
+<!--lista de tareas-->
+<todo-list [list]="tasks" (onComplete)="onCompleteTask($event)" (onDelete)="onDeleteTask($event)"></todo-list>
