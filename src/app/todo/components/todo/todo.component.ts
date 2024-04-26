@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 
 import { Task } from '../../interfaces/task.interface';
+import { TasksService } from '../../services/tasks.service';
 
 @Component({
   selector: 'todo-root',
@@ -34,6 +35,10 @@ export class TodoComponent {
       isCompleted: false
     }
   ];
+
+  //private taskService = inject(TasksService);
+  constructor(private taskService: TasksService) {};
+
   public onDeleteTask(index:number): void{
     this.tasks.splice(index, 1);
   }
