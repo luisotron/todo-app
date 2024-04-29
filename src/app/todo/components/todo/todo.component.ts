@@ -49,4 +49,15 @@ export class TodoComponent {
     this.tasks.push(task);
 }
 
+  public deleteCompletedTask(): void{
+    for (let i = 0; i < this.tasks.length; i++) {
+      console.log(i + "  " + this.tasks[i].description + "  " + this.tasks[i].isCompleted)
+      if(this.tasks[i].isCompleted == true) {
+        console.log( "Se va a borrar " + i + "  " + this.tasks[i].description + "  " + this.tasks[i].isCompleted)
+        this.tasks.splice(i, 1);
+        i--;
+      }
+    }
+  }
+
 }

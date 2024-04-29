@@ -15,6 +15,7 @@ export class ListComponent {
 
   @Output()
   public onComplete: EventEmitter<number> = new EventEmitter();
+  
 
   public delete(index: number): void {
     this.onDelete.emit(index);
@@ -23,4 +24,5 @@ export class ListComponent {
   public complete(index: number): void {
     this.onComplete.emit(index);
   }
+
 }

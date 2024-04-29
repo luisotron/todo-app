@@ -6,6 +6,7 @@ import { Task } from '../../interfaces/task.interface';
   templateUrl: './add-task.component.html',
   styleUrl: './add-task.component.css'
 })
+
 export class AddTaskComponent {
   @Output()
   public onNewTask: EventEmitter<Task> =new EventEmitter();

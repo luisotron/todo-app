@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { TodoComponent } from './components/todo/todo.component';
 import { ListComponent } from './components/list/list.component';
 import { AddTaskComponent } from './components/add-task/add-task.component';
+import { LuisComponent } from './components/luis/luis.component';
 
 
 
@@ -11,7 +12,8 @@ import { AddTaskComponent } from './components/add-task/add-task.component';
   declarations: [
     TodoComponent,
     ListComponent,
-    AddTaskComponent
+    AddTaskComponent,
+    LuisComponent
   ],
   exports: [
     TodoComponent
