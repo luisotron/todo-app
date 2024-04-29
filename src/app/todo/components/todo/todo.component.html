@@ -8,3 +8,8 @@
 <hr>
 <!--Borrar tareas-->
 <todo-luis [list]="tasks" (onDeleteCompleted)="deleteCompletedTask()"></todo-luis>
+
+<todo-list [list]="tasks" 
+(onComplete)="onCompleteTask($event)" 
+(onDelete)="onDeleteTask($event)" 
+(onDeleteCompleted)="deleteCompletedTask()"></todo-list>
