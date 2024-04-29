@@ -17,6 +17,7 @@ public task: Task = {
 };
 
   public emitTask(): void {
+    if (this.task.description.length===0) return;
     this.onNewTask.emit(this.task);
     this.task = {
       description: '',

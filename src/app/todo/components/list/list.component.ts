@@ -11,18 +11,18 @@ export class ListComponent {
   public list: Array<Task> = [];
 
   @Output()
-  public onDelete: EventEmitter<number> = new EventEmitter();
+  public onDelete: EventEmitter<string> = new EventEmitter();
 
   @Output()
-  public onComplete: EventEmitter<number> = new EventEmitter();
+  public onComplete: EventEmitter<string> = new EventEmitter();
   
 
-  public delete(index: number): void {
-    this.onDelete.emit(index);
+  public delete(id?: string): void {
+    this.onDelete.emit(id);
   }
 
-  public complete(index: number): void {
-    this.onComplete.emit(index);
+  public complete(id?: string): void {
+    this.onComplete.emit(id);
   }
 
 }

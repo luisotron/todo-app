@@ -42,13 +42,13 @@ export class TodoComponent {
  get tasks(): Array<Task> {
   return this.taskService.tasks
  }
-  public onDeleteTask(index:number): void{
+  public onDeleteTask(id:string): void{
    // this.tasks.splice(index, 1);
-   this.taskService.deleteTask(index);
+   this.taskService.deleteTask(id);
   }
-  public onCompleteTask(index:number): void{
+  public onCompleteTask(id:string): void{
      // this.tasks[index].isCompleted= !this.tasks[index].isCompleted;
-     this.taskService.completeTask(index);
+     this.taskService.completeTask(id);
     }
   public onNewTask(task :Task): void{
    // this.tasks.push(task);
