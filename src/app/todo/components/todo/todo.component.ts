@@ -39,6 +39,9 @@ export class TodoComponent {
   private taskService = inject(TasksService);
  // constructor(private taskService: TasksService) {};
 
+ get tasks(): Array<Task> {
+  return this.taskService.tasks
+ }
   public onDeleteTask(index:number): void{
    // this.tasks.splice(index, 1);
    this.taskService.deleteTask(index);
